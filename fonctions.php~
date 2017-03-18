@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" media="all" type="text/css" />
+	</head>
+<body>
+
+
+
+	<?php
+	function AfficheChaine($lignechaine)
+	{
+		echo"<p>";
+
+			echo"<tr>";
+				while($emp=mysql_fetch_object($lignechaine))
+				{
+					if(!empty($emp))
+					{
+						echo "<td> $emp->nom </td>";
+					}
+					else
+					{
+						echo "<td> Attribut vide </td>";
+					}
+				}
+			echo "</tr>";
+			echo "</table>";
+			
+	}
+	?>
+	
+	<?php
+		function AfficheProgramme($ligne)
+		{
+			echo"<p>";
+			echo"<table>";
+			
+				while($emp=mysql_fetch_object($ligne))
+				{
+				echo"<tr>";
+					if(!empty($emp))
+					{
+						echo "<td> $emp->LOGO </td>";
+						?><a href="detailprogramme.php" > <?php echo "<td> $emp->TITRE </td>";?></a><?php
+						echo "<td> $emp->DUREE </td>";
+					}
+					else
+					{
+						echo "<td> Attribut vide </td>";
+					}
+				echo "</tr>";
+				}
+			
+			echo "</table>";
+		}
+	?>
+
+	<?php
+	function affichedetailprogramme($programme)
+	{
+		echo"<p>";
+
+			echo"<tr>";
+				while($emp=mysql_fetch_object($lignechaine))
+				{
+					if(!empty($emp))
+					{
+						echo "<td> $emp->titre </td>";
+						echo "<td> $emp->resume </td>";
+						echo "<td> $emp->duree </td>";
+						echo "<td> $emp->type </td>";
+					}
+					else
+					{
+						echo "<td> Attribut vide </td>";
+					}
+				}
+			echo "</tr>";
+			echo "</table>";
+			$vtitre=$emp->ide;?>
+			
+			<a href="redigecommentaire.php" > <input type="button" value="Commenter"> </a><?php
+			
+	}
+	?>
+</body>
+</html>

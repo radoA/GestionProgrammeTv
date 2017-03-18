@@ -1,0 +1,64 @@
+html,
+body{
+	color: black;
+	background-color: white;
+	font-size = 100%;
+	}
+
+h1 {
+	color: DarkRed;
+	text-align: justify;
+	font-size: 200%;
+	background-color: white;
+	}
+
+h2 {
+	color: FireBrick;
+	text-align: justify;
+	font-size: 100%;
+	background-color: white;
+	}
+	
+h3,p {
+	background-color: DarkRed;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 140%;
+	}
+	
+a {
+	background-color: DarkRed;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	}
+	
+.table2{
+	text-align: center;
+	font-size: 170%;
+	 border-collapse:collapse;
+	}
+	
+table {
+
+ border-collapse:collapse;
+ }
+td { 
+ border-width:1px; 
+ font-size: 130%;
+ border-collapse:collapse;
+ font-family: monospace;
+ }
+ 
+ tr{
+  border-collapse:collapse;
+ }
+ 
+
+ 
+ input,select,textarea {
+   border:1px solid #000;
+   font-size: 120%;
+   font-family: monospace;
+}
